@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import React from 'react'
 import { Contact } from '../components/Contact'
 import { Experiences } from '../components/Experiences'
