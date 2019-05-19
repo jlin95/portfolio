@@ -1,9 +1,12 @@
 import React from 'react'
-import { Contact } from '../components/Contact'
-import { Experiences } from '../components/Experiences'
-import { Work } from '../components/Work'
+import config from '../data/config'
+import Header from 'components/Header'
+import { Layout } from '../components/Layout'
 
-const IndexPage = () =>
-    <div>Hello world</div>
+const IndexPage = () => (
+  <Layout>
+  <Header siteTitle={config.siteTitle}/>
+  </Layout>
+)
 
 export default IndexPage

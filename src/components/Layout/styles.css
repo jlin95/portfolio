@@ -1,0 +1,37 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Hanken Grotesk',
+    'Helvetica Neue',
+    serif;
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    font-display: auto;
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/HankenGrotesk/HankenGrotesk-Regular.ttf') format('truetype'),
+    url('/fonts/HankenGrotesk/HankenGrotesk-Regular.woff') format('woff'),
+    url('/fonts/HankenGrotesk/HankenGrotesk-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Hanken Grotesk';
+    font-display: auto;
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/HankenGrotesk/HankenGrotesk-Medium.ttf') format('truetype'),
+    url('/fonts/HankenGrotesk/HankenGrotesk-Medium.woff') format('woff'),
+    url('/fonts/HankenGrotesk/HankenGrotesk-Medium.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Hanken Grotesk';
+    font-display: auto;
+    font-style: normal;
+    font-weight: bold;
+    src: url('/fonts/HankenGrotesk/HankenGrotesk-Bold.ttf') format('truetype'),
+    url('/fonts/HankenGrotesk/HankenGrotesk-Bold.woff') format('woff'),
+    url('/fonts/HankenGrotesk/HankenGrotesk-Bold.woff2') format('woff2');
+}

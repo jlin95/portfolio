@@ -1,5 +1,5 @@
 {
-  "name": "Sam Lee | Software Engineer",
+  "name": "v2",
   "description": "Personal Website - Portfolio",
   "version": "1.0.0",
   "author": "Sam Lee <leeway95@gmail.com>",
@@ -14,8 +14,9 @@
     "gatsby-plugin-styled-components": "^3.0.4",
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-sharp": "^2.1.8",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
     "styled-components": "^4.1.2"
   },
