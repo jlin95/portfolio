@@ -7,6 +7,7 @@ const Header = ({ siteTitle }) => (
     style={{
       background: 'rebeccapurple',
       marginBottom: '1.45rem',
+      fontWeight: 'normal'
     }}
   >
     <div
@@ -32,7 +33,7 @@ const Header = ({ siteTitle }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes.string.isRequired,
 }
 
 Header.defaultProps = {
