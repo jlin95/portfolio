@@ -9,13 +9,11 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-const path = require('path')
-const nodeModules = path.join(__dirname, './node_modules')
 
-exports.onCreateWebpackConfig = ({ actions, loaders, plugins, stage }) => {
+exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
-      modules: ['src', 'node_modules']
+      modules: ['src']
     }
   })
 }

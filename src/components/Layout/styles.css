@@ -3,9 +3,12 @@ html {
 }
 
 body {
+    counter-reset: header-item;
+    margin: 0;
     font-family: 'Hanken Grotesk',
     'Helvetica Neue',
-    serif;
+    'Arial Black',
+    'system-ui';
 }
 
 @font-face {
