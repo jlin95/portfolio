@@ -1,3 +1,4 @@
 import Colors from './Colors'
+import media from './media'
 
-export { Colors }
+export { Colors, media }
