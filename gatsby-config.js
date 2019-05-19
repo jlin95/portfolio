@@ -1,6 +1,8 @@
+const config = require('./src/data/config');
+
 module.exports = {
   siteMetadata: {
-    title: 'Sam Lee | Software Engineer',
+    title: config.siteTitle,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -12,8 +14,21 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/components`,
+        name: 'components'
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: []
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -14,6 +14,7 @@ const HeaderLink = styled(Link)`
   color: ${Colors.white};
   text-decoration: none;
   margin-right: 15px;
+  font-size: 13px;
   padding: 12px;
   ::before {
     counter-increment: header-item;
