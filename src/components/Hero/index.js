@@ -1,35 +1,56 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Colors } from 'themes'
 
-const FlexContainer = styled.section`
-  padding: 0 50px;
+const HeroContainer = styled.section`
 `
-const Introduction = styled.div`
-  font-size: 13px;
+const Introduction = styled.h5`
+  font-size: 15px;
+  margin: 2rem 0;
+  font-weight: normal;
+  line-height: 1.3rem;
 `
 const Hello = styled.h2`
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 2rem 0;
   color: ${Colors.greenBlue};
 `
 const Name = styled.h2`
   font-size: 76px;
+  margin: 0;
 `
-const Subtitle = styled.h3`
-  font-size: 50px;
-  color: ${Colors.greenBlue};
+const LinkGroup = styled.ul`
+  list-style: none;
+  padding: 0;
+  li {
+    display: inline-block;
+  }
+  li:not(:last-child):after {
+    color: ${Colors.grey};
+    content: '/';
+    margin: 0 6px;
+  }
+  li > a {
+    color: ${Colors.greenBlue};
+  }
 `
 
 const Hero = ({ content }) => {
  const { frontmatter, html } = content
+ const { github, linkedin, resume, title, name, writings } = frontmatter
  return (
-   <FlexContainer>
-     <Hello>{frontmatter.title}</Hello>
-     <Name>{frontmatter.name}</Name>
-     <Subtitle>{frontmatter.subtitle}</Subtitle>
+   <HeroContainer>
+     <Hello>{title}</Hello>
+     <Name>{name}</Name>
      <Introduction dangerouslySetInnerHTML={{ __html: html }} />
-  </FlexContainer>
+     <LinkGroup>
+       <li><a href={github}>Github</a></li>
+       <li><a href={linkedin}>Linkedin</a></li>
+       <li><a href={resume}>Resume</a></li>
+       {/*<li><a href={writings}>Writings</a></li>*/}
+     </LinkGroup>
+  </HeroContainer>
  )
 }
 
