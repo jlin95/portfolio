@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <Hero content={data.hero.edges[0].node}/>
     <About content={data.about.edges[0].node}/>
-    <Work content={data.work.edges[0].node}/>
+    <Work content={data.work.edges}/>
     {/*<Projects content={data.projects.edges[0].node}/>*/}
   </Layout>
 )
@@ -43,12 +43,17 @@ export const query = graphql`
         }
       }
     }    
-    work: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/Work/" } }) {
+    work: allMarkdownRemark(
+    filter: { fileAbsolutePath: { regex: "/Work/" } }
+    sort: { fields: [frontmatter___order], order: ASC}
+    ) {
       edges {
         node {
           frontmatter {
             title
-            
+            url
+            date
+            order
           }
           html
         }
