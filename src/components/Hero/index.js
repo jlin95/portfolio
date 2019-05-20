@@ -44,6 +44,7 @@ const Hero = ({ content }) => {
      <Hello>{title}</Hello>
      <Name>{name}</Name>
      <Introduction dangerouslySetInnerHTML={{ __html: html }} />
+     <span>Say Hi 👇 </span>
      <LinkGroup>
        <li><a href={github}>Github</a></li>
        <li><a href={linkedin}>Linkedin</a></li>

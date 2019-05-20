@@ -5,36 +5,30 @@ html {
 body {
     counter-reset: header-item;
     margin: 0;
-    font-family: 'Hanken Grotesk',
+    font-family: 'Rubik',
     'Helvetica Neue',
     'Arial Black',
     'system-ui';
 }
 
 @font-face {
-    font-family: 'Hanken Grotesk';
+    font-family: 'Rubik';
+    font-display: auto;
+    font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/Rubik/Rubik-Light.ttf') format('truetype')
+}
+@font-face {
+    font-family: 'Rubik';
     font-display: auto;
     font-style: normal;
     font-weight: normal;
-    src: url('/fonts/HankenGrotesk/HankenGrotesk-Regular.ttf') format('truetype'),
-    url('/fonts/HankenGrotesk/HankenGrotesk-Regular.woff') format('woff'),
-    url('/fonts/HankenGrotesk/HankenGrotesk-Regular.woff2') format('woff2');
+    src: url('/fonts/Rubik/Rubik-Regular.ttf') format('truetype')
 }
 @font-face {
-    font-family: 'Hanken Grotesk';
+    font-family: 'Rubok';
     font-display: auto;
     font-style: normal;
     font-weight: 500;
-    src: url('/fonts/HankenGrotesk/HankenGrotesk-Medium.ttf') format('truetype'),
-    url('/fonts/HankenGrotesk/HankenGrotesk-Medium.woff') format('woff'),
-    url('/fonts/HankenGrotesk/HankenGrotesk-Medium.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Hanken Grotesk';
-    font-display: auto;
-    font-style: normal;
-    font-weight: bold;
-    src: url('/fonts/HankenGrotesk/HankenGrotesk-Bold.ttf') format('truetype'),
-    url('/fonts/HankenGrotesk/HankenGrotesk-Bold.woff') format('woff'),
-    url('/fonts/HankenGrotesk/HankenGrotesk-Bold.woff2') format('woff2');
+    src: url('/fonts/Rubik/Rubik-Medium.ttf') format('truetype')
 }

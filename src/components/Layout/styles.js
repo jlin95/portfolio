@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Colors } from 'themes'
+import { Colors, media } from 'themes'
 
 export const StyledLayout = styled.div`
   display: flex;
@@ -14,7 +14,13 @@ export const StyledContent = styled.main`
   display: flex;
   flex-direction: column;
   max-width: 900px;
-  margin: 0 auto;
-  padding: 0 50px;
+  padding: 120px 50px;
+  ${media.desktop`
+    margin: 0 auto;
+  `};  
+  ${media.mobile`
+    margin: unset;
+  `};
+  
   
 `
