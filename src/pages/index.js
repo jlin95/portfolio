@@ -1,12 +1,48 @@
 import React from 'react'
-import config from '../data/config'
-import Header from 'components/Header'
-import { Layout } from '../components/Layout'
+import { graphql } from 'gatsby';
+import { Hero } from 'components/Hero'
+import { Layout } from 'components/Layout'
+import { About } from '../components/About'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
-  <Header siteTitle={config.siteTitle}/>
+    <Hero content={data.hero.edges[0].node}/>
+    <About content={data.about.edges[0].node}/>
+    {/*<Work content={data.work.edges[0].node}/>*/}
+    {/*<Projects content={data.projects.edges[0].node}/>*/}
   </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query IndexQuery {
+    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/Hero/" } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            name
+            github
+            linkedin
+            resume
+          }
+          html
+        }
+      }
+    }
+    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/About/" } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            skills
+          }
+          html
+        }
+      }
+    }
+  }
+`;
+
+
