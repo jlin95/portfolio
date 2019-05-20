@@ -38,7 +38,7 @@ const LinkGroup = styled.ul`
 
 const Hero = ({ content }) => {
  const { frontmatter, html } = content
- const { github, linkedin, resume, title, name, writings } = frontmatter
+ const { github, linkedin, resume, title, name } = frontmatter
  return (
    <HeroContainer>
      <Hello>{title}</Hello>
@@ -47,7 +47,7 @@ const Hero = ({ content }) => {
      <LinkGroup>
        <li><a href={github}>Github</a></li>
        <li><a href={linkedin}>Linkedin</a></li>
-       <li><a href={resume}>Resume</a></li>
+       <li><a href={resume} target='_blank' rel='nofollow noopener noreferrer'>Resume</a></li>
        {/*<li><a href={writings}>Writings</a></li>*/}
      </LinkGroup>
   </HeroContainer>

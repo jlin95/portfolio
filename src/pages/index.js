@@ -26,7 +26,6 @@ export const query = graphql`
             github
             linkedin
             resume
-            ctaText
           }
           html
         }

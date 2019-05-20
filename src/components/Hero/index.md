@@ -3,7 +3,7 @@ title: 'Hi! I am'
 name: 'Jia Lin (Sam)'
 github: 'https://www.github.com/jlin95'
 linkedin: 'https://www.linkedin.com/in/jialin-lee-sam'
-resume: 'https://samlee.netlify.com/resume'
+resume: '/Resume.pdf'
 writings: 'https://samlee.netlify.com/blog'
 ---
 
