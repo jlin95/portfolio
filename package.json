@@ -29,6 +29,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "gatsby develop",
+    "serve": "gatsby serve",
     "format": "prettier --write \"src/**/*.js\""
   },
   "devDependencies": {
