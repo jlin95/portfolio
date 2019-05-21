@@ -14,11 +14,9 @@ export const StyledContent = styled.main`
   display: flex;
   flex-direction: column;
   max-width: 900px;
+  margin: 0 auto;
   padding: 120px 50px;
-  ${media.desktop`
-    margin: 0 auto;
-  `};  
-  ${media.mobile`
+  ${media.tablet`
     margin: unset;
   `};
   

@@ -7,7 +7,7 @@ const Container = styled.section`
   align-items: center;
   ${media.mobile`
     display: block;
-    padding: 0;
+    padding: 50px 0 0;
   `};
 `
 
