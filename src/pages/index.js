@@ -4,13 +4,14 @@ import { Hero } from 'components/Hero'
 import { Layout } from 'components/Layout'
 import { About } from 'components/About'
 import { Work } from 'components/Work'
+import { Showcases } from 'components/Showcases'
 
 const IndexPage = ({ data }) => (
   <Layout>
     <Hero content={data.hero.edges[0].node}/>
     <About content={data.about.edges[0].node}/>
     <Work content={data.work.edges}/>
-    {/*<Projects content={data.projects.edges[0].node}/>*/}
+    <Showcases content={data.showcases.edges}/>
   </Layout>
 )
 
@@ -54,6 +55,21 @@ export const query = graphql`
             url
             date
             order
+          }
+          html
+        }
+      }
+    }    
+    showcases: allMarkdownRemark(
+    filter: { fileAbsolutePath: { regex: "/Showcases/" } }
+    sort: { fields: [frontmatter___order], order: ASC}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            url
+            skills
           }
           html
         }
