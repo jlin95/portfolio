@@ -70,6 +70,7 @@ export const query = graphql`
             title
             url
             skills
+            image
           }
           html
         }
