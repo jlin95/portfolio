@@ -20,7 +20,6 @@ const ProjectItem = styled.div`
   `};
 `
 
-
 const Showcases = ({ content }) => {
   return (
     <WorkContainer>
@@ -33,8 +32,8 @@ const Showcases = ({ content }) => {
         <ProjectItem>
           {image && <Image image={image}/>}
           <div>
-          <ProjectTitle href={url} target='_blank'>{title}</ProjectTitle>
-          <ProjectTitle>{skills}</ProjectTitle>
+            <ProjectTitle href={url} target='_blank'>{title}</ProjectTitle>
+            <ProjectTitle>{skills}</ProjectTitle>
           </div>
         </ProjectItem>
         )

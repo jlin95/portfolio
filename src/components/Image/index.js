@@ -2,11 +2,15 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import { media } from 'themes'
 
 const StyledImg = styled(Img).attrs({
   objectFit: 'contain'
 })`
-
+  ${media.mobile`
+    display: block;
+  `}; 
+  margin-right: 12px;
   width: 100%;
 `
 
@@ -27,15 +31,15 @@ const Image = ({ image }) => (
       query {
         catcors: file(relativePath: { eq: "CatCors.png" }) {
           childImageSharp {
-            fluid(maxWidth: 600) {
+            fluid(maxWidth: 600, maxHeight: 400) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         catsdogs: file(relativePath: { eq: "CatsDogs.png" }) {
           childImageSharp {
-            fluid(maxWidth: 600) {
-              ...GatsbyImageSharpFluid
+            fluid(maxWidth: 600, maxHeight: 400) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
