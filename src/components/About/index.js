@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Colors } from 'themes'
+import { Colors, media } from 'themes'
 import { Container as AboutContainer, ContainerTitle } from 'components/Section'
 
 const Flex = styled.div`
@@ -18,6 +18,11 @@ const Introduction = styled.div`
 const SkillsMap = styled.ul`
   display: grid;
   grid-template-columns: minmax(140px, 200px) minmax(140px, 200px);
+  ${media.mobile`
+    width: 100%;
+    padding: 0;
+    grid-template-columns: unset;
+  `}
 
 `
 const SkillItem = styled.li`

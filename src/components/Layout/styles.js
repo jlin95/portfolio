@@ -18,6 +18,7 @@ export const StyledContent = styled.main`
   padding: 120px 50px;
   ${media.tablet`
     margin: unset;
+    text-align: justify;
   `};
   
   

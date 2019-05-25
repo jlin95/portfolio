@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
 `
 
 const Footer = () => {
-  return <StyledFooter>Built by Sam Lee 🥂 (2019)</StyledFooter>
+  return <StyledFooter>Built by Sam Lee <span role='img' aria-label='wine-glass'>🥂</span> (2019)</StyledFooter>
 }
 
 export { Footer }

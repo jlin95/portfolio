@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Colors } from 'themes'
+import { Colors, media } from 'themes'
 
 const HeroContainer = styled.section`
 `
@@ -19,6 +19,10 @@ const Hello = styled.h2`
 const Name = styled.h2`
   font-size: 76px;
   margin: 0;
+  ${media.mobile`
+    font-size: 70px;
+    text-align: start;
+  `};
 `
 const LinkGroup = styled.ul`
   list-style: none;

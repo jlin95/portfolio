@@ -20,5 +20,8 @@ const ContainerTitle = styled.div`
   border: 2px solid ${Colors.greenBlue};
   border-radius: 20px;
   padding: 10px 0;
+  ${media.mobile`
+    width: 100%;
+  `};
 `
 export { Container, ContainerTitle }
