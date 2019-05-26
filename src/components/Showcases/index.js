@@ -10,7 +10,20 @@ const Flex = styled.div`
 const ProjectTitle = styled.a`
   text-decoration: none;
   font-size: 20px;
+  display: inline-block !important;
   color: ${Colors.greenBlue};
+  ::after {
+    display: inline-block;
+    margin-left: 12px;
+    content: '👉';
+  }
+  :hover::after {
+    transition: all .3s ease-out;
+     transform: translate(8px, 0);
+
+   }
+}
+
 `
 const ProjectItem = styled.div`
   display: block;
@@ -21,7 +34,8 @@ const ProjectItem = styled.div`
   `};
 `
 const SkillGroup = styled.div`
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   margin: 20px 0;
 `
 const Skill = styled.span`
@@ -41,6 +55,7 @@ const Blurb = styled.div`
     color: ${Colors.greenBlue};
   }
 `
+
 const Showcases = ({ content }) => {
   return (
     <WorkContainer>
@@ -51,10 +66,20 @@ const Showcases = ({ content }) => {
         const { url, skills, title, image } = frontmatter
         return (
         <ProjectItem>
-          {image ? <Fragment>
-            <ProjectTitle>{title}</ProjectTitle>
-            <a href={url}><ShowcaseImage image={image}/></a>
-          </Fragment> : <ProjectTitle href={url}>{title}</ProjectTitle>}
+          {image ?
+            <Fragment>
+              <ProjectTitle href={url}>
+                {title}
+              </ProjectTitle>
+            <a href={url}>
+              <ShowcaseImage image={image}/>
+            </a>
+          </Fragment>
+            :
+            <ProjectTitle href={url}>
+              {title}
+            </ProjectTitle>
+          }
           <div>
             <SkillGroup>{skills.map(skill => <Skill>{skill}</Skill>)}</SkillGroup>
             <Blurb dangerouslySetInnerHTML={{ __html: html }} />
