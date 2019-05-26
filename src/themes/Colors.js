@@ -1,6 +1,7 @@
 const websiteColors = {
-  white: '#ffffff',
-  night: '#1e2227',
+  realWhite: '#ffffff',
+  white: '#afafbf',
+  night: '#171c28',
   greenBlue: '#5F9EA0',
   grey: '#cecfd5',
   lightGrey: '#d3d3d3'

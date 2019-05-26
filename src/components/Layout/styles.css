@@ -32,3 +32,19 @@ body {
     font-weight: 500;
     src: url('/fonts/Rubik/Rubik-Medium.ttf') format('truetype')
 }
+
+@font-face {
+    font-family: 'Space Mono';
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/SpaceMono/SpaceMono-Regular.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    font-display: auto;
+    font-style: normal;
+    font-weight: bold;
+    src: url('/fonts/SpaceMono/SpaceMono-Bold.ttf') format('truetype')
+}

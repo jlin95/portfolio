@@ -3,6 +3,7 @@ order: '2'
 title: 'Boxed Wholesale'
 url: 'https://www.boxed.com'
 date: 'Aug 2016 - Jul 2017'
+type: 'Internship'
 ---
 
 - Worked in the internal tools engineering team
