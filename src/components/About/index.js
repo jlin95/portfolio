@@ -26,7 +26,7 @@ const SkillsMap = styled.ul`
 
 `
 const SkillItem = styled.li`
-  font-family: Courier;
+  font-family: 'Space Mono';
   display: inline-block;
   ::before {
     content: '\u2192';
