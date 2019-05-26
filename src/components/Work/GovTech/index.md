@@ -3,6 +3,7 @@ order: '3'
 title: 'GovTech'
 url: 'https://www.tech.gov.sg/'
 date: 'May 2016 - Aug 2016'
+type: 'Internship'
 ---
 
 - Worked with Ruby on Rails and React in developing a web application for businesses

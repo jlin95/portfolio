@@ -92,18 +92,32 @@ const Link = styled.a`
   word-break: break-word;
 `
 
+const TypeTag = styled.span`
+  font-size: 12px;
+  padding: 5px;
+  margin-bottom: 12px;
+  background: ${props => props.type === 'Internship' ? Colors.lightGrey : Colors.greenBlue};
+  color: ${props => props.type === 'Internship' ? Colors.night : Colors.realWhite};
+`
+
+
+
 const Timeline = ({ data }) => (
  <TimelineContainer>
-    {data.map((dataItem, idx) => (
+    {data.map((dataItem, idx) => {
+      const { frontmatter } = dataItem.node
+      const { date, title, url, type } = frontmatter
+      return (
       <TimelineItem key={idx}>
         <TimelineItemWrapper>
-          <Date>{dataItem.node.frontmatter.date}</Date>
-          <div>{dataItem.node.frontmatter.title}</div>
-          <Link href={dataItem.node.frontmatter.url}>{dataItem.node.frontmatter.url}</Link>
+          <TypeTag type={type}>{type}</TypeTag>
+          <Date>{date}</Date>
+          <div>{title}</div>
+          <Link href={url}>{url}</Link>
           <Circle/>
         </TimelineItemWrapper>
         </TimelineItem>
-      ))
+      )})
     }
   </TimelineContainer>
 )

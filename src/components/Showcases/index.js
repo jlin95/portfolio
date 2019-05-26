@@ -1,25 +1,46 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { Container as WorkContainer, ContainerTitle } from 'components/Section'
 import { Colors, media } from 'themes'
-import { Image } from 'components/Image'
+import { ShowcaseImage } from 'components/ShowcaseImage'
 
 const Flex = styled.div`
   width: 100%;
 `
 const ProjectTitle = styled.a`
-  font-size: 16px;
+  text-decoration: none;
+  font-size: 20px;
   color: ${Colors.greenBlue};
 `
 const ProjectItem = styled.div`
-  display: flex;
+  display: block;
   margin-bottom: 16px;
   padding: 16px;
   ${media.mobile`
     display: block;
   `};
 `
+const SkillGroup = styled.div`
+  display: block;
+  margin: 20px 0;
+`
+const Skill = styled.span`
+  font-family: 'Space Mono';
+  font-size: 12px;
+  padding: 5px;
+  margin: 3px;
+  color: ${Colors.greenBlue};
+  border: 1px solid ${Colors.greenBlue};
+`
 
+const Blurb = styled.div`
+  font-size: 14px;
+  font-weight: lighter;
+  p > a { 
+    text-decoration: none;
+    color: ${Colors.greenBlue};
+  }
+`
 const Showcases = ({ content }) => {
   return (
     <WorkContainer>
@@ -30,10 +51,13 @@ const Showcases = ({ content }) => {
         const { url, skills, title, image } = frontmatter
         return (
         <ProjectItem>
-          {image && <Image image={image}/>}
+          {image ? <Fragment>
+            <ProjectTitle>{title}</ProjectTitle>
+            <a href={url}><ShowcaseImage image={image}/></a>
+          </Fragment> : <ProjectTitle href={url}>{title}</ProjectTitle>}
           <div>
-            <ProjectTitle href={url} target='_blank'>{title}</ProjectTitle>
-            <ProjectTitle>{skills}</ProjectTitle>
+            <SkillGroup>{skills.map(skill => <Skill>{skill}</Skill>)}</SkillGroup>
+            <Blurb dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </ProjectItem>
         )

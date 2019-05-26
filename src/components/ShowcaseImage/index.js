@@ -11,6 +11,7 @@ const StyledImg = styled(Img).attrs({
     display: block;
   `}; 
   margin-right: 12px;
+  margin-top: 20px;
   width: 100%;
 `
 
@@ -25,20 +26,27 @@ const StyledImg = styled(Img).attrs({
  * - `StaticQuery`: https://gatsby.app/staticquery
  */
 
-const Image = ({ image }) => (
+const ShowcaseImage = ({ image }) => (
   <StaticQuery
     query={graphql`
       query {
         catcors: file(relativePath: { eq: "CatCors.png" }) {
           childImageSharp {
-            fluid(maxWidth: 600, maxHeight: 400) {
+            fluid(maxWidth: 600) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         catsdogs: file(relativePath: { eq: "CatsDogs.png" }) {
           childImageSharp {
-            fluid(maxWidth: 600, maxHeight: 400) {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        redesign: file(relativePath: { eq: "Redesign.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 600) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -48,4 +56,4 @@ const Image = ({ image }) => (
     render={data => <StyledImg fluid={data[image].childImageSharp.fluid} />}
   />
 )
-export { Image }
+export { ShowcaseImage }

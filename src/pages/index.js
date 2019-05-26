@@ -55,6 +55,7 @@ export const query = graphql`
             url
             date
             order
+            type
           }
           html
         }

@@ -3,6 +3,7 @@ order: '0'
 title: 'Ninja Van'
 url: 'https://www.ninjavan.co'
 date: 'Jul 2018 - Present'
+type: 'Full-Time'
 ---
 
 - Worked in a cross-functional team of UX designers, product managers, and engineers

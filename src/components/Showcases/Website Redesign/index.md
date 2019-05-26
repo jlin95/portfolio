@@ -1,6 +1,7 @@
 ---
 title: 'Non Profit Website Redesign'
 order: '2'
+image: 'redesign'
 url: 'https://jlin95.github.io/Lab1Assignment/'
 skills: 
     - Bootstrap
