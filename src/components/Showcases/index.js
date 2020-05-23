@@ -59,34 +59,34 @@ const Blurb = styled.div`
 const Showcases = ({ content }) => {
   return (
     <WorkContainer>
-      <ContainerTitle>Showcases</ContainerTitle>
+      <ContainerTitle>Projects</ContainerTitle>
       <Flex>
-      {content.map(project => {
-        const { frontmatter, html } = project.node
-        const { url, skills, title, image } = frontmatter
-        return (
-        <ProjectItem>
-          {image ?
-            <Fragment>
-              <ProjectTitle href={url}>
-                {title}
-              </ProjectTitle>
-            <a href={url}>
-              <ShowcaseImage image={image}/>
-            </a>
-          </Fragment>
-            :
-            <ProjectTitle href={url}>
-              {title}
-            </ProjectTitle>
-          }
-          <div>
-            <SkillGroup>{skills.map(skill => <Skill>{skill}</Skill>)}</SkillGroup>
-            <Blurb dangerouslySetInnerHTML={{ __html: html }} />
-          </div>
-        </ProjectItem>
-        )
-      })}
+        {content.map(project => {
+          const { frontmatter, html } = project.node
+          const { url, skills, title, image } = frontmatter
+          return (
+            <ProjectItem>
+              {image ?
+                <Fragment>
+                  <ProjectTitle href={url}>
+                    {title}
+                  </ProjectTitle>
+                  <a href={url}>
+                    <ShowcaseImage image={image} />
+                  </a>
+                </Fragment>
+                :
+                <ProjectTitle href={url}>
+                  {title}
+                </ProjectTitle>
+              }
+              <div>
+                <SkillGroup>{skills.map(skill => <Skill>{skill}</Skill>)}</SkillGroup>
+                <Blurb dangerouslySetInnerHTML={{ __html: html }} />
+              </div>
+            </ProjectItem>
+          )
+        })}
       </Flex>
     </WorkContainer>
   )
