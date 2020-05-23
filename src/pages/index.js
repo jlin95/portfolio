@@ -8,10 +8,10 @@ import { Showcases } from 'components/Showcases'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Hero content={data.hero.edges[0].node}/>
-    <About content={data.about.edges[0].node}/>
-    <Work content={data.work.edges}/>
-    <Showcases content={data.showcases.edges}/>
+    <Hero content={data.hero.edges[0].node} />
+    <About content={data.about.edges[0].node} />
+    <Work content={data.work.edges} />
+    <Showcases content={data.showcases.edges} />
   </Layout>
 )
 
@@ -63,7 +63,7 @@ export const query = graphql`
     }    
     showcases: allMarkdownRemark(
     filter: { fileAbsolutePath: { regex: "/Showcases/" } }
-    sort: { fields: [frontmatter___order], order: ASC}
+    sort: { fields: [frontmatter___order], order: DESC}
     ) {
       edges {
         node {

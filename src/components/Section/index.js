@@ -4,7 +4,6 @@ import styled from 'styled-components'
 const Container = styled.section`
   padding: 50px;
   display: flex;
-  align-items: center;
   ${media.mobile`
     display: block;
     padding: 50px 0 0;
@@ -13,7 +12,9 @@ const Container = styled.section`
 
 const ContainerTitle = styled.div`
   font-size: 20px;
+  margin-top: 20px;
   width: 200px;
+  height: 100%;
   text-align: center;
   color: ${Colors.greenBlue};
   margin-right: 40px;
