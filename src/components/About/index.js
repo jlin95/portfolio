@@ -43,14 +43,14 @@ const About = ({ content }) => {
     <AboutContainer>
       <ContainerTitle>{title}</ContainerTitle>
       <Flex>
-      <Introduction dangerouslySetInnerHTML={{ __html: html }} />
-      <SkillsMap>
-      {skills.map(item => {
-          return <SkillItem>{item}</SkillItem>
+        <Introduction dangerouslySetInnerHTML={{ __html: html }} />
+        <SkillsMap>
+          {skills.map(item => {
+            return <SkillItem>{item}</SkillItem>
 
-      })
-        }
-      </SkillsMap>
+          })
+          }
+        </SkillsMap>
       </Flex>
     </AboutContainer>
   )

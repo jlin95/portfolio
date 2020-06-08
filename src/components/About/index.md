@@ -4,17 +4,17 @@ skills:
   - JavaScript
   - HTML & CSS, Styled-Components
   - React, Redux
-  - D3
-  - Vue
-  - NodeJS
-  - GraphQL
+  - D3 / threeJS
+  - Vue (beginner)
+  - NodeJS (familar)
+  - GraphQL (beginner)
   - Java
+  - Python
+  - Flutter/Dart
 ---
 
-I graduated from the [National University of Singapore](http://nus.edu.sg/) and went to join
-the engineering team at [Ninja Van](https://www.ninjavan.co) where I work on developing the company's external-facing web applications, working in a cross-functional team of product designers, product managers, QA engineers, and fellow developers.
-Previously, I had three internships at [Boxed Wholesale](https://www.boxed.com), [Sephora Digital](https://www.sephora.sg), and [GovTech](https://www.tech.gov.sg/).
+I graduated from the [National University of Singapore](http://nus.edu.sg/) and went to join the engineering team at [Ninja Van](https://www.ninjavan.co), doing web development (helped build [this](https://www.ninjavan.co) from scratch! Among other things.)
 
-When I am not coding, you can find me running/hiking, travelling/backpacking, or finding the best food deals around.
+Previously interned at [Boxed Wholesale](https://www.boxed.com), [Sephora Digital](https://www.sephora.sg), and [GovTech](https://www.tech.gov.sg/). I was initially interested in going into the neuroscience field , but that was before I figured out I wanted to build software. I still find neuroscience as a field super interesting.
 
 These are the technologies and tools that I worked with: 
